@@ -60,18 +60,23 @@ div header nav {
 }
 .contenedor .sidebar{
     grid-column: 3 / 4;
-    background: #faa430;
+    background-image: linear-gradient(to top, #faa430, yellow);
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transform: translate(10px);
     grid-area: sidebar;
     padding: 50px;
+    
 }
 .imagen_foto{
     height: 250px;
     width: 300px;
+    transition: width 2s;
+}
+.imagen_foto:hover{
+    width: 200px;
 }
 .contenedor .widget-1{
     text-align: center;
@@ -88,7 +93,54 @@ div header nav {
     display: flex;
     align-items:center;
     justify-items:center;
-    
+    animation-name: nuestro_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+@keyframes nuestro_efecto {
+    0%{
+        width:100px;
+    }
+    10%{
+        background-color: aqua;
+        width: 100px;
+        border: 3px solid black;
+    }
+    25%{
+        background-color: cadetblue;
+        width: 150px;
+    }
+    50%{
+        background-color: darkcyan;
+        height: 150px;
+        border-radius: 3px solid black;
+    }
+    75%{
+        background-color: darkseagreen;
+        height: 180px;
+    }
+    100%{
+        background-color: burlywood;
+        border-radius: 100px;
+        height: 200px;
+        width: 200px;
+    }
+
+}
+h2{
+    animation-duration: 2s;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+}
+@keyframes efecto {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .contenedor .widget-1{
     grid-area: widget-1;
@@ -122,6 +174,7 @@ h4{
     margin-right: 100px;
     
 }
+
 @media screen and (max-width: 768px) {
     body {
         background-image: url("./fondo5.jpg");
