@@ -1,0 +1,11 @@
+@import "menu";
+body{
+    background-color: cadetblue;
+  
+}
+$fontp: 20px;
+$fontfamily: "Rodoro";
+p {
+    font-size: $fontp;
+    font-family: $fontfamily;
+}

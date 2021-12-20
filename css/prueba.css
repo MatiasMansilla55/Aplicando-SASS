@@ -1,0 +1,15 @@
+div header nav {
+  text-align: center; }
+  div header nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none; }
+    div header nav a:hover {
+      color: black; }
+
+body {
+  background-color: cadetblue; }
+
+p {
+  font-size: 20px;
+  font-family: "Rodoro"; }
