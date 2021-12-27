@@ -7,9 +7,60 @@ div header nav {
     div header nav a:hover {
       color: black; }
 
+/*creo la variable $tablet para despues usarla en la media querie*/
+/*cambio de color de letra en contacto.html en 768px*/
+@media screen and (max-width: 768px) {
+  section legend {
+    color: white; }
+  /*Creo una variable y despues uso @each*/
+  section form label {
+    color: white;
+    font-size: 20px; }
+  /*nesting*/
+  section form div {
+    color: white; } }
+
+section aside div p {
+  color: white; }
+
 body {
-  background-color: cadetblue; }
+  background-image: url("/assets/fondo4.jpg"); }
 
 p {
   font-size: 20px;
   font-family: "Rodoro"; }
+
+/*Creo un mapa para cursos.html*/
+/*aplico each en las tabla de cursos.html*/
+.tr-3 td {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; }
+
+.tr-4 td {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; }
+
+/*mapa para map-get() en el footer*/
+.contenedor .footer {
+  background-color: #12203e;
+  color: #fff;
+  padding: 20px;
+  grid-area: footer; }
+
+/*extend en el widget-1 y 2*/
+.widget-1, .widget-2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center; }
+
+/*mixin  en la foto de redes*/
+.imagen_foto-2 {
+  height: 40%;
+  width: 100%; }
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("/assets/fondo5.jpg"); } }

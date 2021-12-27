@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url("./fondo4.jpg");
+    background-image: url("/assets/fondo4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color:#000;
@@ -23,25 +23,24 @@ body{
                         "widget-1 widget-2 sidebar"
                         "footer footer footer"
 }
-nav{
-    text-align: center;
-}
- div header nav a{
-    color: white;
-    text-decoration: none;
-    
-}
-    
-
 div header nav {
     list-style-type: none;
+    text-align: center;
 } 
-.header{
-    display: flex;
-    justify-content: center;
+div header nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
     
 }
-
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__nav .logo{
+    width: 100px;
+}
 .contenedor > div,
 .contenedor .header,
 .contenedor .contenido,
@@ -86,11 +85,11 @@ div header nav {
     width: 200px;
 }
 
-.imagen_foto-2{
+/* .imagen_foto-2{
     width: 100%;
     height: 40%;
-}
-.contenedor .widget-1{
+} */
+/* .contenedor .widget-1{
     text-align: center;
     display: flex;
     align-items: center;
@@ -101,7 +100,7 @@ div header nav {
     display: flex;
     align-items: center;
     justify-items: center;
-}
+} */
 
 
  .imagen_foto-3{
@@ -139,10 +138,7 @@ h4{
     color: black;
 }
  .redes_ul{
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 15px; 
+    margin: 15px;
     display: flex;
     justify-content: space-between 
 }
@@ -165,7 +161,7 @@ h4{
 
 @media screen and (max-width: 768px) {
     body {
-        background-image: url("./fondo5.jpg");
+        background-image: url("/assets/fondo5.jpg");
     }
     .contenedor {
         grid-template-areas:"header header header"
@@ -174,8 +170,30 @@ h4{
                         "widget-1 widget-1 widget-2"
                         "footer footer footer"
     }
+
+    .header__nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between ;
+    }
+    .contenedor .header{
+        grid-area: header;
+    }
+    .contenedor .contenido{
+        grid-area: contenido ;
+    }
+    .contenedor .widget-1{
+        grid-area: widget-1;
+    }
+    .contenedor .widget-2{
+        grid-area: widget-2;
+    }
+    .contenedor .footer{
+        grid-area: footer;
+    }
     .contenedor .sidebar{
-        background-color: beige
+        background-color: beige;
+        grid-area: sidebar;
     }
     .contenedor .widget-1,
     .contenedor .widget-2{
@@ -192,19 +210,13 @@ h4{
         width: 100%;
         height: 100%;
     }
-    .p{
+    /* .p{
         color: white;
-    }
+    } */
     .p-2{
         color: white;
     }
     .p-3{
-        color: white;
-    }
-    .tr-3{
-        color: white;
-    }
-    .tr-4{
         color: white;
     }
 }

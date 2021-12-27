@@ -1,6 +1,7 @@
 @import "menu";
+@import "contactomediaquerie.scss";
 body{
-    background-color: cadetblue;
+    background-image: url("/assets/fondo4.jpg");
   
 }
 $fontp: 20px;
@@ -8,4 +9,62 @@ $fontfamily: "Rodoro";
 p {
     font-size: $fontp;
     font-family: $fontfamily;
+}
+
+/*Creo un mapa para cursos.html*/
+
+$tabla:("td");
+
+/*aplico each en las tabla de cursos.html*/
+
+@each $estilos in $tabla {
+    .tr-3 #{$estilos} {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+    }
+@each $estilos in $tabla {
+    .tr-4 #{$estilos} {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+    
+}
+/*mapa para map-get() en el footer*/
+$estilos:(color1: #fff, color2: #12203e, 20px:20px, footer:footer );
+
+    .contenedor .footer{
+        background-color: map-get($map: $estilos, $key: color2);
+        color: map-get($map: $estilos, $key: color1);
+        padding: map-get($map: $estilos, $key: 20px);
+        grid-area: map-get($map: $estilos, $key: footer) ;
+    }
+/*extend en el widget-1 y 2*/
+ 
+ .widget-1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.widget-2 {
+@extend .widget-1;
+}
+
+/*mixin  en la foto de redes*/
+    
+@mixin sizes ($width,$heigth){
+    height: $heigth;
+    width: $width;
+}
+.imagen_foto-2{
+    @include sizes(100%,40%);
+}
+@media screen and (max-width: 768px){
+    body{
+        background-image: url("/assets/fondo5.jpg");
+    }
+   
 }

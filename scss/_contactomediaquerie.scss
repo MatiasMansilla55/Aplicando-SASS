@@ -1,0 +1,37 @@
+/*creo la variable $tablet para despues usarla en la media querie*/
+$tablet:"(max-width: 768px) ";
+/*cambio de color de letra en contacto.html en 768px*/
+@media screen and #{$tablet} {
+    section{
+        legend{
+            color: white;
+        }
+    }
+/*Creo una variable y despues uso @each*/
+$datos:("label");
+@each $estilo in $datos {
+    section form  #{$estilo}{
+        color: white;
+        font-size: 20px;
+    }
+    
+}
+/*nesting*/
+ section{
+     form{
+         div{
+            color: white;
+             
+         }
+     }
+ }
+}
+section{
+    aside{
+        div{
+            p{
+                color: white;
+            }
+        }
+    }
+}
